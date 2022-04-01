@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="public/css/partials/normalize.css" />
+        <link rel="stylesheet" href="public/css/login.css" />
+        <link rel="shortcut icon" href="/public/img/favicon.ico" type="image/x-icon">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HappyGroup - Iniciar sesion</title>
+    </head>
+    <body>
+        <main class="form">
+            <form action="/login" method="post" class="form__container">
+                <% if (errorMsg.length > 0 ) { %>
+                <h1 class="error"><%= errorMsg %></h1>
+                <% } else {%>
+                <h1>Iniciar sesion</h1>
+                <% }%>
+                <input
+                    type="text"
+                    class="form__username"
+                    name="username"
+                    placeholder="Usuario"
+                    id="username"
+                />
+                <input
+                    type="password"
+                    class="form__password"
+                    name="password"
+                    placeholder="Contraseña"
+                    id="password"
+                />
+                <input
+                    type="submit"
+                    value="Enviar"
+                    class="form__submit"
+                    id="submit"
+                    disabled
+                />
+                <span
+                    >¿No tiene cuenta? <a href="/register">Registrate</a></span
+                >
+            </form>
+        </main>
+        <script src="public/js/login.js"></script>
+    </body>
+</html>

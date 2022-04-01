@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: #759fb2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+}
+.header__exit {
+    cursor: pointer;
+    margin: 1vmin;
+}
+
+.header__title {
+    cursor: pointer;
+    margin: 3vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmin;
+}
+.header__title a {
+    color: #000;
+    text-decoration: none;
+    font-family: "Dancing Script", cursive;
+}
+@media (orientation: portrait) {
+    .header__title {
+        font-size: 3.8vmax;
+    }
+    .header__exit {
+        margin: 3vmin;
+    }
+}
